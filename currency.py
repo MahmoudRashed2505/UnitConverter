@@ -1,4 +1,3 @@
-#! /usr/bin/env python3
 import json
 import requests
 import csv
@@ -34,8 +33,9 @@ def choose_currency():
     convertedCurrency = input("Which Currency do you want to convert to: ")
     return baseCurrency,convertedCurrency
 
-sys("clear")
-amountToBeConverted = input("Enter Amount: ")
-baseCurrency,convertedCurrency = choose_currency()
-convertedAmount=convert(baseCurrency,convertedCurrency,amountToBeConverted)
-print("{} {} = {:.3f} {} \n".format(amountToBeConverted,baseCurrency,convertedAmount,convertedCurrency))
+def convertCurrency():
+    sys("clear")
+    amountToBeConverted = input("Enter Amount: ")
+    baseCurrency,convertedCurrency = choose_currency()
+    convertedAmount=convert(baseCurrency,convertedCurrency,amountToBeConverted)
+    print("{} {} = {:.3f} {} \n".format(amountToBeConverted,baseCurrency,convertedAmount,convertedCurrency))
